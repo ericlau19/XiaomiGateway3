@@ -2251,6 +2251,15 @@ DEVICES += [{
         MapConv("power_on_state", "select", mi="2.p.9", map={0: "default", 1: "on", 2: "off"}),
     ],
 }, {
+    16699: ["LeMesh", "Mesh Light", "lemesh.light.wy0d02"],
+    "spec": [
+        BaseConv("light", "light", mi="2.p.1"),
+        BrightnessConv("brightness", mi="2.p.2", max=100),
+        ColorTempKelvin("color_temp", mi="2.p.3", mink=2700, maxk=6500),
+        MapConv("mode", "select", mi="2.p.7", map={0: "None", 4: "lighting", 5: "night", 7: "warmth", 8: "TV", 9: "reading", 10: "computer", 11: "hospitality", 12: "entertainment", 13: "wakeup", 14: "dusk", 15: "sleep"}),
+        MapConv("power_on_state", "select", mi="2.p.9", map={0: "default", 1: "on", 2: "off"}),
+    ],
+}, {
     17964: ["LeMesh", "Smart downlight Mesh version", "mvs.light.wy0a01"],
     "spec": [
         BaseConv("light", "light", mi="2.p.1"),
